@@ -1,0 +1,152 @@
+/* ── Services Nav ── */
+.services-nav {
+  background: var(--white);
+  border-bottom: 1px solid var(--mid-gray);
+  position: sticky;
+  top: 72px;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.services-nav__inner {
+  display: flex;
+  overflow-x: auto;
+  gap: 4px;
+  padding: 4px 0;
+  scrollbar-width: none;
+}
+
+.services-nav__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.services-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-gray);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: color var(--transition), background var(--transition);
+  flex-shrink: 0;
+}
+
+.services-nav__link:hover {
+  color: var(--navy);
+  background: var(--light-gray);
+}
+
+.services-nav__icon {
+  font-size: 1rem;
+}
+
+/* ── Service Section ── */
+.service-section__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.service-section__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.service-section__icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 8px;
+}
+
+.service-section__title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.service-section__tagline {
+  font-size: 1.05rem;
+  color: var(--gold-dark);
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.service-section__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.service-section__desc p {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  line-height: 1.8;
+}
+
+/* ── Deliverables ── */
+.service-section__deliverables {
+  background: var(--white);
+  border: 1px solid var(--mid-gray);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  border-left: 4px solid var(--gold);
+}
+
+.section--gray .service-section__deliverables {
+  background: var(--white);
+}
+
+.service-section__deliv-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+
+.service-section__deliv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-section__deliv-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--dark);
+  line-height: 1.5;
+}
+
+.service-section__check {
+  color: var(--gold);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 0.9rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .service-section__body {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .service-section__header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .service-section__icon {
+    font-size: 2.2rem;
+  }
+}
